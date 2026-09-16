@@ -1,0 +1,21 @@
+name: Feature request
+description: 提议新的 Agent、工具、业务规则或界面能力。
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+    validations:
+      required: true
+  - type: textarea
+    id: tenant
+    attributes:
+      label: 租户隔离与安全影响

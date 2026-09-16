@@ -1,0 +1,22 @@
+[
+  {
+    "title": "AcmeCloud API 认证",
+    "content": "AcmeCloud API 使用租户 ID 和 API Key 识别调用方。401 表示认证信息缺失，403 表示租户或密钥无效，或当前套餐不包含目标功能。请勿在对话、日志或工单中粘贴完整密钥。"
+  },
+  {
+    "title": "SDK 403 排查",
+    "content": "SDK 返回 403 时，应依次核对运行环境、租户 ID、套餐权限、功能开关和 IP 白名单，并保留脱敏后的 request_id。不要在没有查询真实套餐信息时直接断言根因。"
+  },
+  {
+    "title": "Webhook 排障",
+    "content": "Webhook 失败时检查 HTTPS 证书、签名原文、时间戳、返回状态码和响应耗时。平台重试必须设置上限并采用退避策略。完整回调 URL 和签名密钥属于敏感信息。"
+  },
+  {
+    "title": "知识库导入",
+    "content": "管理员可以通过 /knowledge/add 或 /knowledge/upload 导入租户文档。SaaS 模式会为文档附加 tenant_id、product、version、doc_type、visibility 和 source 元数据。"
+  },
+  {
+    "title": "支持工单",
+    "content": "只有在用户明确要求后才创建工单。工单使用 tenant_id 和 request_id 保证幂等；查询时必须验证工单属于当前租户。"
+  }
+]

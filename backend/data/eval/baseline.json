@@ -1,0 +1,12 @@
+{
+  "timestamp": null,
+  "total": 0,
+  "passed": 0,
+  "pass_rate": 0.0,
+  "avg_scores": {},
+  "regressions": [],
+  "recommendations": [
+    "尚未生成 TenantRelay 基线；请运行 /eval/run 后再记录真实指标。"
+  ],
+  "results": []
+}

@@ -1,0 +1,37 @@
+@baseUrl = http://localhost:8000
+@tenantId = demo-tenant
+@apiKey = demo-key-change-me
+
+### Health
+GET {{baseUrl}}/health
+
+### SaaS chat
+POST {{baseUrl}}/chat
+Content-Type: application/json
+X-Tenant-ID: {{tenantId}}
+X-API-Key: {{apiKey}}
+
+{
+  "message": "Python SDK 上传接口返回 403，我们刚降级到 basic 套餐",
+  "user_id": "user_001",
+  "product": "AcmeCloud",
+  "environment": "production"
+}
+
+### Current subscription
+GET {{baseUrl}}/saas/subscription
+X-Tenant-ID: {{tenantId}}
+X-API-Key: {{apiKey}}
+
+### Create ticket (explicit user action)
+POST {{baseUrl}}/saas/tickets
+Content-Type: application/json
+X-Tenant-ID: {{tenantId}}
+X-API-Key: {{apiKey}}
+
+{
+  "title": "Python SDK 403",
+  "description": "生产环境上传失败，已确认不是密钥粘贴问题。",
+  "priority": "high",
+  "request_id": "demo-request-001"
+}
